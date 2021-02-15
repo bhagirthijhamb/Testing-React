@@ -1,22 +1,30 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import App from '../App';
+import { shallow } from 'enzyme';
+import CommentBox from './../CommentBox';
 
 // it means what the file name (component App)
 // goal of the test is to prove that the App component renders CommentBox component in it.
+// it('shows a comment box', () => {
+//   const div = document.createElement('div');
+
+//   ReactDOM.render(<App />, div);
+
+//   // Look inside the div
+//   // and check to see if the CommentBox is in there
+//  // console.log(div.innerHTML); // <div>I am the app component<div>Comment Box</div><div>Comment List</div></div>
+
+//  // expect(div.innerHTML).toContain('Comment Box');
+//   ReactDOM.unmountComponentAtNode(div);
+// })
+
 it('shows a comment box', () => {
-  const div = document.createElement('div');
-
-  ReactDOM.render(<App />, div);
-
-  // Look inside the div
-  // and check to see if the CommentBox is in there
- // console.log(div.innerHTML); // <div>I am the app component<div>Comment Box</div><div>Comment List</div></div>
-
- expect(div.innerHTML).toContain('Comment Box');
- 
-  ReactDOM.unmountComponentAtNode(div);
+  const wrapped = shallow(<App />);
+  expect(wrapped.find(CommentBox).length).toEqual(1);
 })
+
+
 
 // Any time we want to run our tests, we are gonna execute npm run test command in the terminal
 // this starts up jest which is our aotomated test runner
