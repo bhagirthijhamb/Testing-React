@@ -3,6 +3,7 @@ import React from 'react';
 import App from '../App';
 import { shallow } from 'enzyme';
 import CommentBox from './../CommentBox';
+import CommentList from './../CommentList';
 
 // it means what the file name (component App)
 // goal of the test is to prove that the App component renders CommentBox component in it.
@@ -22,6 +23,11 @@ import CommentBox from './../CommentBox';
 it('shows a comment box', () => {
   const wrapped = shallow(<App />);
   expect(wrapped.find(CommentBox).length).toEqual(1);
+})
+
+it('show a comment list', () => {
+  const wrapped = shallow(<App />);
+  expect(wrapped.find(CommentList).length).toEqual(1);
 })
 
 
