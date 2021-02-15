@@ -8,6 +8,13 @@ it('shows a comment box', () => {
   const div = document.createElement('div');
 
   ReactDOM.render(<App />, div);
+
+  // Look inside the div
+  // and check to see if the CommentBox is in there
+ // console.log(div.innerHTML); // <div>I am the app component<div>Comment Box</div><div>Comment List</div></div>
+
+ expect(div.innerHTML).toContain('Comment Box');
+ 
   ReactDOM.unmountComponentAtNode(div);
 })
 
@@ -26,4 +33,4 @@ it('shows a comment box', () => {
 // document here is furnished by JSDOM
 // We than create an instance of App component inside of this div. React takes the App componeney, the html prodiced by that App coponent and sticks it into the div element
 // After that we can write some logic to inspect what happens inside of the App component.
-// ReactDOM.unmountComponentAtNode() is the cleanup.
+// ReactDOM.unmountComponentAtNode() is the cleanup for the performance.
