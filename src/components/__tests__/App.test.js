@@ -1,9 +1,12 @@
 import React from 'react';
 // import ReactDOM from 'react-dom';
-import App from '../App';
+// import App from '../App';
 import { shallow } from 'enzyme';
-import CommentBox from './../CommentBox';
-import CommentList from './../CommentList';
+// import CommentBox from './../CommentBox';
+// import CommentList from './../CommentList';
+import App from 'components/App';
+import CommentBox from 'components/CommentBox';
+import CommentList from 'components/CommentList';
 
 // it means what the file name (component App)
 // goal of the test is to prove that the App component renders CommentBox component in it.
