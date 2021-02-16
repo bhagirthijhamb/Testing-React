@@ -11,7 +11,7 @@ class CommentBox extends Component {
     e.preventDefault();
 
     // Cal an action creator
-    // And save the comment
+    // And save the comment...
 
     this.setState({ comment: ''});
   }
