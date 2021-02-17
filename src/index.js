@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Root from 'Root';
+import Root from 'root';
 import reducers from 'reducers'; // list of reducers
 
 import App from 'components/App';
