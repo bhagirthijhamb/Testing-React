@@ -26,11 +26,20 @@ it('can fetch a list of comments and display them', (done) => {
   // find the 'fetchCommnts' button and click it
   wrapped.find('.fetch-comments').simulate('click');
 
-  setTimeout(() => {
+  // setTimeout(() => {
+  //   wrapped.update();
+  //   // Expect to find a list of comments!
+  //   expect(wrapped.find('li').length).toEqual(2);
+  //   done();
+  //   wrapped.unmount();
+  // }, 100);
+
+
+  moxios.wait(() => {
     wrapped.update();
     // Expect to find a list of comments!
     expect(wrapped.find('li').length).toEqual(2);
     done();
     wrapped.unmount();
-  }, 100);
+  });
 })
