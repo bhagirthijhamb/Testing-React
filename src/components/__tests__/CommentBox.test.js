@@ -20,6 +20,9 @@ afterEach(() => {
 it('has a text area and two buttons', () => {
   // const wrapper = mount(<CommentBox />);
 
+  // find() raw HTML elements
+  console.log(wrapped.find('textarea'));
+  console.log(wrapped.find('button'));
   expect(wrapped.find('textarea').length).toEqual(1);
   expect(wrapped.find('button').length).toEqual(2);
 })

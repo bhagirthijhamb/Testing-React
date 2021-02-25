@@ -25,12 +25,17 @@ import CommentList from 'components/CommentList';
 
 let wrapped;
 
+// beforeEach() is provided by Jest
+// good for setting up some common setup logic
 beforeEach(() => {
   wrapped = shallow(<App />);
 })
 
 it('shows a comment box', () => {
   // const wrapped = shallow(<App />);
+  // wrapped .find returns an array
+  // toEqual is the matcher (like toContain)
+  // find component instances
   expect(wrapped.find(CommentBox).length).toEqual(1);
 })
 
