@@ -7,9 +7,9 @@ let wrapped;
 
 beforeEach(() => {
   wrapped = mount(
-  <Root>
-    <CommentBox />;
-  </Root>
+    <Root>
+      <CommentBox />;
+    </Root>
   )
 })
 
