@@ -12,6 +12,7 @@ beforeEach(() => {
   
   wrapped = mount(
     <Root initialState={initialState}>
+      {/* <CommentList /> gets this initialState from mapStateToProps */}
       <CommentList />
     </Root>
   )
